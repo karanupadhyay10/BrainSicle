@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+    <link rel="stylesheet" href="static/games.css" />
+  </head>
+  <body>
+    <h1>Games</h1>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-image">
+          <a href="{{ url_for('static', filename='game1.html') }}">
+            <img src="static/actiongame.png" alt="Game 1" />
+          </a>
+        </div>
+        <div class="card-content">
+          <h2>Adventure 1</h2>
+          <p>Action-packed adventure awaits!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <a href="{{ url_for('static', filename='game2.html') }}">
+            <img src="static/memorycards.jpg" alt="Game 2" />
+          </a>
+        </div>
+        <div class="card-content">
+          <h2>Memory Cards</h2>
+          <p>Race against Time!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <a href="{{ url_for('static', filename='Accuracy.html') }}">
+            <img src="static/accbg.png" alt="Accuracy" />
+          </a>
+        </div>
+        <div class="card-content">
+          <h2>Game 3</h2>
+          <p>Strategy and wit meet here</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="static/game1.png" alt="Game 4" />
+        </div>
+        <div class="card-content">
+          <h2>Game 4</h2>
+          <p>Embark on a magical quest.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

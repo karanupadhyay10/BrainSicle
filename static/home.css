@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    padding: 12px 20px; /* Adjusted padding */
+    display: flex;
+    align-items: center; /* Vertically centers the logo and nav */
+    justify-content: space-between; /* Spreads logo and nav apart */
+    background: linear-gradient(90deg, #8E44AD, #a14ac6,
+    #3498DB, #1ABC9C, #2ECC71, #4CAF50, orange); /* Initial gradient */
+    background-size: 400% 400%; 
+    animation: gradientChange 25s ease infinite; /* Gradient animation */
+}
+
+.logo {
+    width: 180px;
+    height: 30px;
+    margin-right: 760px; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Aligns menu items horizontally */
+    align-items: center; /* Vertically centers the menu items */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px; /* Adjusted padding for consistency */
+}
+
+nav ul li a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 23px 10px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h1 {
+    color: #333;
+}
+
+.material-symbols-outlined {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 7px;
+    margin-left: 20px;
+    color: white;
+  
+}
+.material-symbols-outlined:hover{
+    background-color: white;
+    color: black;
+    padding: 7px;
+    border-radius: 50px;
+   
+}
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Ensures the text color inherits from the parent (button) */
+}
+.intro{
+    /* margin-top: 20px; */
+    background-image: url('backg.jpg');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    
+    
+}
+
+h3 {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    
+  }
+
+h1{
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@keyframes gradientChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position:0% 50%
+    }
+}
+.sections-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.section {
+    width: 300px;  /* Larger size */
+    height: 300px;  /* Larger size */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.section:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.section:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.section:active {
+    animation: clickEffect 0.3s ease;
+}
+
+@keyframes clickEffect {
+    0% { transform: scale(1.15); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1.1); }
+}
+
+/* Specific styles for each button */
+.game-section {
+    background: linear-gradient(135deg, #ff6f61, #ff8c42);
+    border: 2px solid #f4511e;
+}
+
+.chatbot-section {
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
+    border: 2px solid #1565c0;
+}
+
+.reports-section {
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
+    border: 2px solid #2e7d32;
+}
